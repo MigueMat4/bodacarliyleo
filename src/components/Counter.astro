@@ -1,0 +1,78 @@
+<div class="counter">
+    <div class="circle-container">
+      <div class="circle" id="days">0</div>
+      <div class="text">DÍAS</div>
+    </div>
+    <div class="circle-container">
+      <div class="circle" id="hours">0</div>
+      <div class="text">HORAS</div>
+    </div>
+    <div class="circle-container">
+      <div class="circle" id="minutes">0</div>
+      <div class="text">MINUTOS</div>
+    </div>
+</div>  
+
+<style>
+    .counter {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    .circle-container {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .circle {
+        align-items: center;
+        border-radius: 50%;
+        background-color: #fff;
+        color: #000;
+        display: flex;
+        font-size: 5vw;
+        justify-content: center;
+        height: 10vw;
+        margin: 0 10px;
+        width: 10vw;
+    }
+
+    .text {
+        text-align: center;
+        font-size: 2vw;
+        margin: 5px 0;
+    }
+
+    @media only screen and (max-width: 768px) {
+        .circle {
+            height: 7vh;
+            width: 7vh;
+        }
+
+        .text {
+            font-size: 2vh;
+        }
+    }
+</style>
+
+<script>
+    function updateCounter(): void {
+        const now: Date = new Date();
+        const eventDate: Date = new Date("2024-05-10T21:00:00"); // Fecha del evento
+
+        const timeLeft: number = eventDate.getTime() - now.getTime();
+
+        const days: number = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+        const hours: number = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes: number = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+
+        document.getElementById("days")!.innerText = days.toString();
+        document.getElementById("hours")!.innerText = hours.toString();
+        document.getElementById("minutes")!.innerText = minutes.toString();
+    }
+
+    // Actualizar el contador cada segundo
+    setInterval(updateCounter, 1000);
+</script>

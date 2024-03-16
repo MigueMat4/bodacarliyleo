@@ -1,14 +1,17 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Counter from '../components/Counter.astro';
 ---
 
 <Layout title="Boda Carli y Leo">
-	<main class="px-12">
-		<p>"PORQUE ES MEJOR SER DOS QUE UNO, PORQUE AMBOS PUEDEN AYUDARSE MUTUAMENTE A LOGRAR EL ÉXITO"</p>
-		<p class="text-right">Eclesiastés 4:9</p>
+	<main>
 		<section>
-			<h2>¡Contando los días!</h2>
-			<!-- Componente de contador -->
+			<p>"PORQUE ES MEJOR SER DOS QUE UNO, PORQUE AMBOS PUEDEN AYUDARSE MUTUAMENTE A LOGRAR EL ÉXITO"</p>
+			<p class="text-right text-xs"><span>Eclesiastés 4:9</span></p>
+		</section>
+		<section class="wedding-counter text-white">
+			<h2 class="mb-2"><span>¡Contando los días!</span></h2>
+			<Counter />
 		</section>
 		<section>
 			<p>HAY MOMENTOS EN LA VIDA QUE SON ESPECIALES, PERO SIN LUGAR A DUDA EL HECHO DE PODER COMPARTIR
@@ -20,9 +23,9 @@ import Layout from '../layouts/Layout.astro';
 				<!-- GIF -->
 			</div>
 			<div>
-				<p>VIERNES 10 DE MAYO</p>
-				<p>FORTÍN RIVADAVIA 3050 SALÓN MY LIFE</p>
-				<p>21:00 HS (SE RUEGA PUNTUALIDAD)</p>
+				<p>VIERNES <br> 10 DE MAYO</p>
+				<p>FORTÍN RIVADAVIA 3050 <br> SALÓN MY LIFE</p>
+				<p>21:00 HS <br> (SE RUEGA PUNTUALIDAD)</p>
 			</div>
 			<p>Ver ubicación</p>
 		</section>
@@ -48,3 +51,16 @@ import Layout from '../layouts/Layout.astro';
 		</section>
 	</main>
 </Layout>
+
+<style>
+	section {
+		margin-bottom: 15vh;
+		padding-left: 3rem;
+		padding-right: 3rem;
+	}
+
+	.wedding-counter {
+		background-color: #C69C6D;
+		padding: 2rem 3rem;
+	}
+</style>
