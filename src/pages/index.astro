@@ -1,6 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Counter from '../components/Counter.astro';
+import { Image } from 'astro:assets';
+import ringGif from '../images/gifs/anillo.gif';
+import musicGif from '../images/gifs/musica.gif';
+import giftGif from '../images/gifs/regalo.gif';
+import newlyweds from '../images/newlyweds.webp';
 ---
 
 <Layout title="Boda Carli y Leo">
@@ -14,36 +19,39 @@ import Counter from '../components/Counter.astro';
 			<Counter />
 		</section>
 		<section>
-			<p>HAY MOMENTOS EN LA VIDA QUE SON ESPECIALES, PERO SIN LUGAR A DUDA EL HECHO DE PODER COMPARTIR
+			<p class="text-xs">HAY MOMENTOS EN LA VIDA QUE SON ESPECIALES, PERO SIN LUGAR A DUDA EL HECHO DE PODER COMPARTIR
 				JUNTO A USTEDES NUESTRO FELIZ COMIENZO, LO CONVIERTE EN UN DÍA INOLVIDABLE.
 			</p>
 		</section>
 		<section>
-			<div>
-				<!-- GIF -->
+			<div class="flex justify-center">
+				<Image src={ringGif} alt="Gif anillo" class="w-14"/>
 			</div>
-			<div>
-				<p>VIERNES <br> 10 DE MAYO</p>
-				<p>FORTÍN RIVADAVIA 3050 <br> SALÓN MY LIFE</p>
-				<p>21:00 HS <br> (SE RUEGA PUNTUALIDAD)</p>
+			<div class="flex wedding-info">
+				<p class="flex-1">VIERNES <br> 10 DE MAYO</p>
+				<p class="flex-1 px-1 border-x-4 border-x-black">FORTÍN RIVADAVIA 3050<br>SALÓN MY LIFE</p>
+				<p class="flex-1">21:00 HS <br> (SE RUEGA PUNTUALIDAD)</p>
 			</div>
-			<p>Ver ubicación</p>
+			<p class="text-xs"><span>Ver ubicación</span></p>
 		</section>
 		<section>
-			<!-- Imagen circular -->
-		</section>
-		<section>
-			<h2>IMPORTANTE</h2>
-			<p>Llevar bebida de su preferencia</p>
-			<div>
-				<!-- GIF -->
+			<div class="flex justify-center">
+				<Image src={newlyweds} alt="Novios" class="rounded-full w-20 h-20"/>
+			</div>
+			<h2 style="color: #C69C6D;">IMPORTANTE</h2>
+			<p class="text-xs"><span>Llevar bebida de su preferencia</span></p>
+			<div class="flex justify-center">
+				<Image src={musicGif} alt="Gif anillo" class="w-8 mt-5"/>
 			</div>
 			<p>¿QUÉ MÚSICA TE GUSTARÍA BAILAR?</p>
-			<p>Agregar canciones</p>
+			<p class="text-xs"><span>Agregar canciones</span></p>
 		</section>
 		<section>
-			<h2>Obsequios</h2>
-			<p>LA CASA ESTÁ ARMADA, ASÍ QUE NO SE COMPLIQUEN; AHORA SI QUIEREN COLABORAR CON LA LUNA DE MIEL
+			<div class="flex items-center justify-center">
+				<Image src={giftGif} alt="Gif anillo" class="w-8"/>
+				<h2><span>Obsequios</span></h2>
+			</div>
+			<p class="text-xs">LA CASA ESTÁ ARMADA, ASÍ QUE NO SE COMPLIQUEN; AHORA SI QUIEREN COLABORAR CON LA LUNA DE MIEL
 				PUEDEN HACERLO MEDIANTE UNA TRANSFERENCIA A LA SIGUIENTE CUENTA:
 			</p>
 			<p>CBU: 3110030211003044583030</p>
@@ -55,12 +63,17 @@ import Counter from '../components/Counter.astro';
 <style>
 	section {
 		margin-bottom: 15vh;
-		padding-left: 3rem;
-		padding-right: 3rem;
+		padding-left: 2.5rem;
+		padding-right: 2.5rem;
 	}
 
 	.wedding-counter {
 		background-color: #C69C6D;
 		padding: 2rem 3rem;
+	}
+
+	.wedding-info {
+		font-size: 0.70rem;
+		line-height: 1rem;
 	}
 </style>
