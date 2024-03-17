@@ -6,11 +6,18 @@
 
 <style>
 	.header-photo {
-        background-image: url("https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg");
-        background-position: center;
+        background-image: url("../images/bg-header.webp");
+        background-position: top;
         background-repeat: no-repeat;
         background-size: cover;
-        height: 60vh;
-        margin-bottom: 2rem;
+        height: 80vh;
+        margin-bottom: 2vh;
 	}
+
+    @media only screen and (max-width: 768px) {
+        .header-photo {
+            background-position: center;
+            height: 60vh;
+	    }
+    }
 </style>
