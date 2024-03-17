@@ -1,0 +1,41 @@
+---
+import { Image } from 'astro:assets';
+import brushButton from '../images/brush-button.webp';
+
+interface Props {
+	text: string;
+	href: string;
+}
+
+const { href, text } = Astro.props;
+---
+
+<div class="container">
+    <Image src={brushButton} alt="Brocha"/>
+    <p><a href={href} target="_blank">{text}</a></p>
+</div>
+
+<style>
+    .container {
+        cursor: pointer;
+        display: flex;
+        font-family: 'BritishCastilla';
+        font-size: 3vw;
+        justify-content: center;
+        margin-top: 20px;
+        position: relative;
+        text-decoration: none;
+    }
+
+    .container img {
+        height: 100%;
+        position: absolute;
+        top: 0;
+        width: auto;
+        z-index: -1;
+    }
+
+    .container p a:hover {
+        opacity: 0.8;
+    }
+</style>

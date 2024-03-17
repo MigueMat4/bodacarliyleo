@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Counter from '../components/Counter.astro';
+import Button from '../components/Button.astro';
 import { Image } from 'astro:assets';
 import ringGif from '../images/gifs/anillo.gif';
 import musicGif from '../images/gifs/musica.gif';
@@ -32,7 +33,7 @@ import newlyweds from '../images/newlyweds.webp';
 				<p class="flex-1 px-1 border-x-4 border-x-black">FORTÍN RIVADAVIA 3050<br>SALÓN MY LIFE</p>
 				<p class="flex-1">21:00 HS <br> (SE RUEGA PUNTUALIDAD)</p>
 			</div>
-			<p class="text-xs"><span>Ver ubicación</span></p>
+			<Button href='https://maps.app.goo.gl/iMiSNNfKpq9X7uAh7' text='ver ubicación'>
 		</section>
 		<section>
 			<div class="flex justify-center">
@@ -44,7 +45,7 @@ import newlyweds from '../images/newlyweds.webp';
 				<Image src={musicGif} alt="Gif anillo" class="w-8 mt-5"/>
 			</div>
 			<p>¿QUÉ MÚSICA TE GUSTARÍA BAILAR?</p>
-			<p class="text-xs"><span>Agregar canciones</span></p>
+			<Button href='https://youtube.com/playlist?list=PLPrToFikzDI1zx66KCqodDjKvGBA91WxU&si=E8FkvLWaZVthVQHM' text='agregar canciones'>
 		</section>
 		<section>
 			<div class="flex items-center justify-center">
