@@ -52,7 +52,7 @@ import newlyweds from '../images/newlyweds.webp';
 				<Image src={giftGif} alt="Gif anillo" class="w-8"/>
 				<h2><span>Obsequios</span></h2>
 			</div>
-			<p class="text-xs">LA CASA ESTÁ ARMADA, ASÍ QUE NO SE COMPLIQUEN; AHORA SI QUIEREN COLABORAR CON LA LUNA DE MIEL
+			<p class="text-xs mt-2">LA CASA ESTÁ ARMADA, ASÍ QUE NO SE COMPLIQUEN; AHORA SI QUIEREN COLABORAR CON LA LUNA DE MIEL
 				PUEDEN HACERLO MEDIANTE UNA TRANSFERENCIA A LA SIGUIENTE CUENTA:
 			</p>
 			<p>CBU: 3110030211003044583030</p>
@@ -72,6 +72,7 @@ import newlyweds from '../images/newlyweds.webp';
         background-image: url("../images/brush-newlyweds.webp");
         background-position: center;
         background-repeat: no-repeat;
+		background-size: contain;
     }
 
 	.wedding-counter {
@@ -83,4 +84,10 @@ import newlyweds from '../images/newlyweds.webp';
 		font-size: 0.70rem;
 		line-height: 1rem;
 	}
+
+	@media only screen and (max-width: 768px) {
+        section {
+            margin-bottom: 5vh;
+	    }
+    }
 </style>

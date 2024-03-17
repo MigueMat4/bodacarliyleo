@@ -38,4 +38,10 @@ const { href, text } = Astro.props;
     .container p a:hover {
         opacity: 0.8;
     }
+
+    @media only screen and (max-width: 768px) {
+        .container {
+            font-size: 2vh;
+	    }
+    }
 </style>
