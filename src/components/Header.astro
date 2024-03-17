@@ -1,7 +1,7 @@
 <header class="flex flex-col justify-center mb-8">
     <div class="header-photo"></div>
     <h1 class="text-3xl">Carla<span class="text-sm">&</span>Leonardo</h1>
-    <p><span>¡Nos casamos!</span></p>
+    <p class="bg-brush"><span>¡Nos casamos!</span></p>
 </header>
 
 <style>
@@ -13,6 +13,13 @@
         height: 80vh;
         margin-bottom: 2vh;
 	}
+
+    .bg-brush {
+        background-image: url("../images/brush1.webp");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
 
     @media only screen and (max-width: 768px) {
         .header-photo {
