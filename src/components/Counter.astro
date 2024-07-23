@@ -68,9 +68,15 @@
         const hours: number = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         const minutes: number = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
 
-        document.getElementById("days")!.innerText = days.toString();
-        document.getElementById("hours")!.innerText = hours.toString();
-        document.getElementById("minutes")!.innerText = minutes.toString();
+        if (days < 0) {
+            document.getElementById("days")!.innerText = days.toString();
+            document.getElementById("hours")!.innerText = hours.toString();
+            document.getElementById("minutes")!.innerText = minutes.toString();
+        } else {
+            document.getElementById("days")!.innerText = "0";
+            document.getElementById("hours")!.innerText = "0";
+            document.getElementById("minutes")!.innerText = "0";
+        }
     }
 
     // Actualizar el contador cada segundo
